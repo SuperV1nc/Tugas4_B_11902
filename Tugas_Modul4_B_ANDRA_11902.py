@@ -47,11 +47,26 @@ if uploaded_file is not None:
     st.markdown("<h1 style='text-align: center;'>Unsupervised Learning - ANDRA</h1>", unsafe_allow_html=True)
     st.dataframe(input_data)
 
-model_directory = r'D:\UAJY Kuliah Andra 220711902\Matkul\Semester 5\Pembelajaran Mesin dan Pembelajaran Mendalam B\5 Unsupervised Learning\Unsupervised Learning (Praktek)\Tugas4_B_11902'
+# model_directory = r'D:\UAJY Kuliah Andra 220711902\Matkul\Semester 5\Pembelajaran Mesin dan Pembelajaran Mendalam B\5 Unsupervised Learning\Unsupervised Learning (Praktek)\Tugas4_B_11902'
+# model_path = {
+#     "AGG_model": os.path.join(model_directory, "AGG_model.pkl"),
+#     "KMeans_model": os.path.join(model_directory, "KMeans_model.pkl"),
+#     "DBSCAN_model": os.path.join(model_directory, "DBSCAN_model.pkl"),
+# }
+
+# models = {}
+# for model_name, path in model_path.items():
+#     if os.path.exists(path):
+#         with open(path, 'rb') as f:
+#             models[model_name] = pickle.load(f)
+#     else:
+#         st.write(f"Model {model_name} tidak ditemukan di path : {path}")
+
+
 model_path = {
-    "AGG_model": os.path.join(model_directory, "AGG_model.pkl"),
-    "KMeans_model": os.path.join(model_directory, "KMeans_model.pkl"),
-    "DBSCAN_model": os.path.join(model_directory, "DBSCAN_model.pkl"),
+    "AGG_model": "AGG_model.pkl",
+    "KMeans_model": "KMeans_model.pkl",
+    "DBSCAN_model": "DBSCAN_model.pkl",
 }
 
 models = {}
